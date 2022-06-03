@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Bomb Page</title>
+<body>
+
+
+<h1>The Bomb Page</h1>
+<h2>Let the countdown begin</h2>
+<img src="bomb.jpg"
+
+<div class="form-box" data-errormsg="">
+    <input type="number" id="fusetime" placeholder="enter fuse time">
+    <button type="button" id="btnstartbomb" onclick="countdown()">Start Countdown</button>
+</div>
+
+  <p id="countdownstatus"></p>
+  <p id="countdownfield"></p>
+
+  <button type="button" onclick="countdown(10)">Click Me!</button>
+
+<script>
+//const init = function(){
+//  let fusetime = document.getElementById("input-fusetime").value;
+//  document.getElementById("countdownfield").innerHTML = "Not started";
+//  document.getElementById("countdownfield").innerHTML = ""
+//}
+
+const printToScreen = (n) => {
+  document.getElementById("countdownfield").innerHTML = `Goodbye Cruel World in ${n}`;
+}
+
+const stopAtZero = (n,itvId) => {
+	if (n <= 0){
+       	clearInterval(itvId)
+        document.getElementById("countdownfield").innerHTML = "BOOM!!!!";
+        document.getElementById("countdownstatus").innerHTML = "Ended";
+     }
+}
+
+const countdown = () => {
+ let n = document.getElementById('fusetime').value;
+ document.getElementById("countdownstatus").innerHTML = "Counting Down";
+ itvId = setInterval(() => {
+ 	n = n-1;
+    printToScreen(n);
+    stopAtZero(n,itvId);
+    },1000)
+}
+
+const newclick = (msg) => {
+  alert(msg);
+}
+
+//document.addEventListener("DOMContentLoaded",init);
+let fusetime = 10
+let button = document.getElementById('btnstartbomb');
+//button.addEventListener('click',countdown(fusetime));
+//document.getElementById('btn_startbomb').addEventListener('click',alert("action"));
+document.getElementById("countdownstatus").innerHTML = "Not Started";
+</script>
+
+
+</body>
+</html>

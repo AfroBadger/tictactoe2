@@ -1,0 +1,14 @@
+body {
+    background-color: aquamarine;
+    cursor: -webkit-grab;
+    font-size: 40px;
+    font-family: monospace;
+}
+
+td {
+    font-size: 60px;
+    width: 5cm;
+    height: 5cm;
+    text-align: center;
+}
+
