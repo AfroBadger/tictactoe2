@@ -2,7 +2,7 @@
   "name": "tictactoe",
   "version": "1.1.0",
   "description": "This is a basic tic-tac-toe game written in JS",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon start server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
