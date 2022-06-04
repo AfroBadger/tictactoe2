@@ -98,6 +98,7 @@ function checkBoard() {
             document.getElementById("header").innerHTML = "WE HAVE A WINNER!";
             document.getElementById("header").style.backgroundColor = "Green";
             disableBoardClicks();
+            document.getElementById("btnReset").style.visibility = "visible";
         }
         else{checkForDraw()}
     }
@@ -115,6 +116,14 @@ function checkForDraw() {
     if (values.every(e => e !== "-")){
         document.getElementById("header").innerHTML = "THIS IS A DRAW";
     }
+}
+function loadResetBtn(){
+    
+    document.getElementById("resetBtm").addEventListener("click",reloadPage);
+}
+
+function reloadPage(){
+    window.location.reload();
 }
     
 function winningLineCheck(line){
