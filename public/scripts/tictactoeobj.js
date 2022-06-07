@@ -95,8 +95,8 @@ function checkBoard() {
         console.log(winLines[i]);
         if (winningLineCheck(winLines[i])){
             console.log("We have a winner");
-            document.getElementById("header").innerHTML = "WE HAVE A WINNER!";
-            document.getElementById("header").style.backgroundColor = "Green";
+            document.getElementById("winnerMsg").innerHTML = "WE HAVE A WINNER!";
+            document.getElementById("winnerMsg").style.visibility = "visible";
             disableBoardClicks();
             document.getElementById("btnReset").style.visibility = "visible";
         }

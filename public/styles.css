@@ -1,8 +1,27 @@
 body {
     background-color: aquamarine;
-    cursor: -webkit-grab;
     font-size: 40px;
     font-family: monospace;
+    text-align: center;
+}
+
+#winnerMsg {
+    width: 100pc;
+    height: 100px;
+    background: rgb(110, 249, 46);
+    animation: mymove 2s infinite;
+    text-align: center;
+    visibility: hidden;
+  }
+  
+  @keyframes mymove {
+    from {background-color: rgb(11, 225, 245);}
+    to {background-color: purple;}
+  }
+
+table {
+    align-items: center;
+    align-content: center;
 }
 
 td {
@@ -24,4 +43,5 @@ td {
     transition-duration: 0.4s;
     cursor: pointer;
     visibility: hidden;
+    align-items: center;
   }
